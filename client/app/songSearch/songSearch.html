@@ -31,7 +31,7 @@
         <div class="col-md-6 events">
           <h2>Upcoming Events</h2>
           <div ng-repeat="event in events">
-           <div class="event"> {{ event.venue.name }} / {{ event.venue.city }} /  {{ event.venue.country }} -- {{ event.datetime }}</div>
+           <div class="event"><span class="date">{{ event.datetime }}</span> <span class="place">{{ event.venue.name }} / {{ event.venue.city }} /  {{ event.venue.country }}</span> </div>
           </div>
        </div>
       </div>
