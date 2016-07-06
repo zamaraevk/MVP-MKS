@@ -7,6 +7,7 @@ angular.module('songSearch', [])
 	$scope.topTracks = [];
 	$scope.events;
 	$scope.image;
+	$scope.afterSearch = false;
 	$scope.callInput = function(input){
 		var searchArr = Search.searchArtist(input);
 		searchArr.then(function(item){
@@ -16,6 +17,7 @@ angular.module('songSearch', [])
 
 				console.log(trackObj);
 				$scope.topTracks = trackObj;
+				$scope.afterSearch = true;
 
 			})
 		});
@@ -23,6 +25,14 @@ angular.module('songSearch', [])
 		var searchEvents = Search.upcomingEvents(input, function(resp){
 			console.log(resp);
 			$scope.events = resp;
+			// var time = $scope.events.datetime;
+
+			// function convertDate(inputFormat) {
+			//   function pad(s) { return (s < 10) ? '0' + s : s; }
+			//   var d = new Date(inputFormat);
+			//   return [pad(d.getDate()), pad(d.getMonth()+1), d.getFullYear()].join('/');
+			// }
+			// convertDate(time);
 		});
 		// searchEvents.success(function(events){
 		// 	console.log(events);

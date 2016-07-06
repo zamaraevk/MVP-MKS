@@ -1,5 +1,6 @@
-body{
+body, html{
 	background-color: #000;
+	height: 100%
 }
 h2 {
 	padding-bottom: 20px;
@@ -30,9 +31,9 @@ h2 {
 	text-align: center;
 }
 #cover{
-	max-width: 500px;
-	margin: 50px;
-
+	
+	
+	padding-bottom: 50px;
 }
 .top, 
 .events h2{
@@ -70,8 +71,9 @@ h2 {
 
 }
 
+
 @media (max-width: 600px) {
   #cover {
-    max-width: 320px;
+    width: 100%;
   }
 }

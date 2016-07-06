@@ -11,16 +11,16 @@
           <a class="btn btn-primary btn-lg btn-custom" ng-click="callInput(input)" role="button">Search</a>
       </div>
     </div>
-  </div>
-  <div class="container">
+  </div> 
+  <div class="container" ng-show="afterSearch">
       <div class="row">
-        <div class="col-md-12 cover">
+        <div class="col-sm-12 cover">
            <img id="cover" src = "{{ image }}" />
         </div>   
       </div>
   </div>    
 
-  <div class="container">
+  <div class="container" ng-show="afterSearch">
       <div class="row">
         <div class="col-md-6 top">
           <h2>Top 10 Songs</h2>
@@ -31,7 +31,7 @@
         <div class="col-md-6 events">
           <h2>Upcoming Events</h2>
           <div ng-repeat="event in events">
-           <div class="event"><span class="date">{{ event.datetime }}</span> <span class="place">{{ event.venue.name }} / {{ event.venue.city }} /  {{ event.venue.country }}</span> </div>
+           <div class="event"><span class="date">{{ event.datetime | date:'HH:mm MM/dd/yyyy' }}</span> <span class="place">{{ event.venue.name }} / {{ event.venue.city }} /  {{ event.venue.country }}</span> </div>
           </div>
        </div>
       </div>
