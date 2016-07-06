@@ -21,24 +21,11 @@ angular.module('songSearch', [])
 
 			})
 		});
-
-		var searchEvents = Search.upcomingEvents(input, function(resp){
-			console.log(resp);
-			$scope.events = resp;
-			// var time = $scope.events.datetime;
-
-			// function convertDate(inputFormat) {
-			//   function pad(s) { return (s < 10) ? '0' + s : s; }
-			//   var d = new Date(inputFormat);
-			//   return [pad(d.getDate()), pad(d.getMonth()+1), d.getFullYear()].join('/');
-			// }
-			// convertDate(time);
-		});
-		// searchEvents.success(function(events){
-		// 	console.log(events);
-		// })
+	var searchEvents = Search.upcomingEvents(input, function(resp){
+		console.log(resp);
+		$scope.events = resp;
+	});
 	};
-
 	$scope.playTrack = function(){
 		console.log(this);
 		if(!$scope.audio){

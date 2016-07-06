@@ -5,8 +5,7 @@
     <div class="container">
       <h1>Your Favorite Artist</h1>
       <p>Search for your favorite artist and see a list of top songs and upcoming events</p>
-      <div id="wrapper">
-          
+      <div id="wrapper">         
           <input type="text" id="searchQuery" ng-model="input" value="" class="form-control" placeholder="Type an Artist Name"/>
           <a class="btn btn-primary btn-lg btn-custom" ng-click="callInput(input)" role="button">Search</a>
       </div>
@@ -19,8 +18,7 @@
         </div>   
       </div>
   </div>    
-
-  <div class="container" ng-show="afterSearch">
+  <div class="container secondSection" ng-show="afterSearch">
       <div class="row">
         <div class="col-md-6 top">
           <h2>Top 10 Songs</h2>

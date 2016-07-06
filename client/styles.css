@@ -73,11 +73,9 @@ h2 {
 .listEvents{
 	margin-bottom: 50px;
 }
-.footer {
-	background-color: #2ebd59;
-	height: 100px;
-	text-align: center;
-	color: #fff;
+.secondSection {
+	padding-bottom: 100px;
+	border-bottom:3px solid #2ebd59;
 }
 
 
