@@ -8,7 +8,8 @@ angular.module('services', [])
       url: 'https://api.spotify.com/v1/search?q=' + artist + '&type=artist',
     })
     .then(function (resp) {
-      return data  = resp.data.artists.items[0].id;
+      console.log(resp);
+      return data  = resp.data.artists.items[0];
       //console.log(resp.data.artists.items);
     })
     .catch(function(err){

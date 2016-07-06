@@ -12,10 +12,17 @@
       </div>
     </div>
   </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12 cover">
+           <img id="cover" src = "{{ image }}" />
+        </div>   
+      </div>
+  </div>    
 
   <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 top">
           <h2>Top 10 Songs</h2>
           <div ng-repeat="track in topTracks">
            <div class="track" ng-click="playTrack()" > {{ track.name }} </div>

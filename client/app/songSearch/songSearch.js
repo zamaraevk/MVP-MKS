@@ -6,11 +6,13 @@ angular.module('songSearch', [])
 	$scope.audio = null;
 	$scope.topTracks = [];
 	$scope.events;
+	$scope.image;
 	$scope.callInput = function(input){
 		var searchArr = Search.searchArtist(input);
 		searchArr.then(function(item){
-			console.log(item);
-			Search.getTopTracks(item).then(function(trackObj){
+			console.log('get image', item);
+			$scope.image = item.images[0].url;
+			Search.getTopTracks(item.id).then(function(trackObj){
 
 				console.log(trackObj);
 				$scope.topTracks = trackObj;
