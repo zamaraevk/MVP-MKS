@@ -1,0 +1,11 @@
+<div id='container' ng-controller="songSearchController">
+  <!-- Your html here -->
+ <h1>Search Song</h1>
+ <form id="search-form">
+        <input type="text" id="searchQuery" ng-model="input" value="" class="form-control" placeholder="Type an Artist Name"/>
+        <button ng-click="callInput(input)">Submit</button>
+ </form>
+  <div ng-repeat="track in topTracks">
+   <div class="track" ng-click="playTrack()" > {{ track.name }} </div>
+  </div>
+</div>

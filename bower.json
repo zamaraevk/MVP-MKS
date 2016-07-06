@@ -1,0 +1,21 @@
+{
+  "name": "Konstantin",
+  "description": "MVP Project in MKS",
+  "main": "index.js",
+  "authors": [
+    "Konstantin Zamaraev"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/zamaraevk/MVP-MKS",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7",
+    "jquery": "^3.0.0"
+  }
+}
