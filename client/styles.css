@@ -1,0 +1,21 @@
+.custom {
+	text-align: center;
+	color:#2ebd59;
+	background-color: #000;
+}
+#searchQuery {
+	border-radius: 0px;
+	height: 40px;
+	text-align: center;
+	font-size: 28px;
+	padding: 25px;
+}
+
+.btn-custom, .btn-custom:hover {
+	margin: 20px;
+	background-color:#2ebd59;
+	border: none;
+}
+#wrapper {
+	text-align: center;
+}
