@@ -5,6 +5,7 @@ angular.module('songSearch', [])
 	//$scope.input='';
 	$scope.audio = null;
 	$scope.topTracks = [];
+	$scope.events;
 	$scope.callInput = function(input){
 		var searchArr = Search.searchArtist(input);
 		searchArr.then(function(item){
@@ -19,6 +20,7 @@ angular.module('songSearch', [])
 
 		var searchEvents = Search.upcomingEvents(input, function(resp){
 			console.log(resp);
+			$scope.events = resp;
 		});
 		// searchEvents.success(function(events){
 		// 	console.log(events);
