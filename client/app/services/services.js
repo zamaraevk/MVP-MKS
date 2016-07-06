@@ -17,7 +17,7 @@ angular.module('services', [])
    };
 
    var upcomingEvents= function (artist, callback) {
-     $http.jsonp('http://api.bandsintown.com/artists/' + artist + '/events.json?app_id=localhost&callback=JSON_CALLBACK')
+     $http.jsonp('https://api.bandsintown.com/artists/' + artist + '/events.json?app_id=localhost&callback=JSON_CALLBACK')
     .success(function (resp) {
       callback(resp)
      // return data  = resp.data.artists.items[0].id;
