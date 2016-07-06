@@ -3,8 +3,8 @@
 
   <div class="jumbotron custom">
     <div class="container">
-      <h1>Your Favourite Artist</h1>
-      <p>Search for your favourite artist and see list of top songs and also upcoming events</p>
+      <h1>Your Favorite Artist</h1>
+      <p>Search for your favorite artist and see list of top songs and upcoming events</p>
       <div id="wrapper">
           
           <input type="text" id="searchQuery" ng-model="input" value="" class="form-control" placeholder="Type an Artist Name"/>
@@ -30,7 +30,8 @@
         </div>
         <div class="col-md-6 events">
           <h2>Upcoming Events</h2>
-          <div ng-repeat="event in events">
+          <input type="text" id="searchQuery" class="form-control listEvents" ng-model="searchText"  placeholder="Filter location..."/>
+          <div ng-repeat="event in events | filter:searchText">
            <div class="event"><span class="date">{{ event.datetime | date:'HH:mm MM/dd/yyyy' }}</span> <span class="place">{{ event.venue.name }} / {{ event.venue.city }} /  {{ event.venue.country }}</span> </div>
           </div>
        </div>

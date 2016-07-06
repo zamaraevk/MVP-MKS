@@ -9,8 +9,9 @@ angular.module('myApp', [
       templateUrl: 'app/songSearch/songSearch.html',
       controller: 'songSearchController'
     })
-    // .otherwise({
-    //   redirectTo: '/signin'
-    // });
+    .otherwise({
+      redirectTo: '/',
+
+    });
 
 })
