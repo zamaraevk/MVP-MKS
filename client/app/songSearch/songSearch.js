@@ -13,12 +13,16 @@ angular.module('songSearch', [])
 
 				console.log(trackObj);
 				$scope.topTracks = trackObj;
-				// trackObj.forEach(function(track){
-				// 	$scope.topTracks.push(track);
 
-				// })
 			})
-		})
+		});
+
+		var searchEvents = Search.upcomingEvents(input, function(resp){
+			console.log(resp);
+		});
+		// searchEvents.success(function(events){
+		// 	console.log(events);
+		// })
 	};
 
 	$scope.playTrack = function(){
@@ -32,15 +36,5 @@ angular.module('songSearch', [])
 		}
 		
 	}
-	//console.log(topTracks);
-// 	document.getElementById('search-form').addEventListener('submit', function (e) {
-//     	var x = document.getElementById('searchQuery').value;
-//     	//console.log(x);
-//      var search = Search.searchArtist(x);
-//      search.then(function(resp){
-//      	console.log(resp);
-//      })
-// }, false);
 
-	//Search.getSongs();
 });
