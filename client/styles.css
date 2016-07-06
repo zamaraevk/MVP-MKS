@@ -1,6 +1,9 @@
 body{
 	background-color: #000;
 }
+h2 {
+	padding-bottom: 20px;
+}
 .custom {
 	text-align: center;
 	color:#2ebd59;
@@ -31,4 +34,25 @@ body{
 	margin: 50px;
 
 }
-.top
+.top, 
+.events h2{
+	text-align: center;
+	color:#2ebd59;
+}
+.toplist {
+	font-size: 18px;
+	color: #666;
+}
+.track {
+	padding: 10px;
+	margin: 5px;
+	border: 1px solid #666;
+	border-radius: 5px;
+}
+.track:hover {
+
+	color:#fff;
+	background-color: #2ebd59;
+	cursor: pointer;
+
+}

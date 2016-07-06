@@ -24,11 +24,11 @@
       <div class="row">
         <div class="col-md-6 top">
           <h2>Top 10 Songs</h2>
-          <div ng-repeat="track in topTracks">
+          <div class="toplist" ng-repeat="track in topTracks">
            <div class="track" ng-click="playTrack()" > {{ track.name }} </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 events">
           <h2>Upcoming Events</h2>
           <div ng-repeat="event in events">
            <div class="event"> {{ event.venue.name }} / {{ event.venue.city }} /  {{ event.venue.country }} -- {{ event.datetime }}</div>
