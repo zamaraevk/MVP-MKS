@@ -8,9 +8,15 @@ angular.module('songSearch', [])
 	$scope.events;
 	$scope.image;
 	$scope.afterSearch = false;
+	$scope.dinner = false;
 	$scope.callInput = function(input){
-		var searchArr = Search.searchArtist(input);
-		searchArr.then(function(item){
+		if(input === 'Sam' || input === 'sam' || input === 'Samantha' || input === 'samantha'){
+			$scope.dinner = true;
+			$scope.afterSearch = false;
+		} else {
+			$scope.dinner = false;
+			var searchArr = Search.searchArtist(input);
+			searchArr.then(function(item){
 			console.log('get image', item);
 			$scope.image = item.images[0].url;
 			Search.getTopTracks(item.id).then(function(trackObj){
@@ -19,12 +25,14 @@ angular.module('songSearch', [])
 				$scope.topTracks = trackObj;
 				$scope.afterSearch = true;
 
-			})
-		});
-	var searchEvents = Search.upcomingEvents(input, function(resp){
-		console.log(resp);
-		$scope.events = resp;
-	});
+				})
+			});
+				var searchEvents = Search.upcomingEvents(input, function(resp){
+				console.log(resp);
+				$scope.events = resp;
+			});
+		
+		}
 	};
 	$scope.playTrack = function(){
 		console.log(this);
